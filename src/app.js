@@ -25,6 +25,9 @@ mongoose.connect(process.env.MONGO_URI)
 const topicRoutes = require('./routes/topicRoutes')
 app.use('/', topicRoutes)
 
+const linkRoutes = require('./routes/linkRoutes')
+app.use('/topics/:id/links', linkRoutes)
+
 // Server
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
