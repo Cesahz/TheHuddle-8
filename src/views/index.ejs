@@ -1,28 +1,16 @@
 <%- include('partials/header') %>
 
-<div class="flex justify-between items-center mb-8">
-  <h1 class="text-2xl text-green-400">Temas</h1>
-  <a href="/topics/new" class="bg-green-500 hover:bg-green-400 text-gray-950 px-4 py-2 rounded font-bold">+ Nuevo tema</a>
+<div class="page-header">
+  <h1 class="title-primary">Temas</h1>
+  <a href="/topics/new" class="btn-primary">+ Nuevo tema</a>
 </div>
 
 <% if (topics.length === 0) { %>
-  <p class="text-gray-500">No hay temas todavía.</p>
+  <p class="text-muted">No hay temas todavía.</p>
 <% } %>
 
 <% topics.forEach(topic => { %>
-  <div class="border border-gray-800 rounded p-4 mb-4 hover:border-green-800 transition">
-    <div class="flex justify-between items-start">
-      <div>
-        <a href="/topics/<%= topic._id %>" class="text-lg text-white hover:text-green-400"><%= topic.titulo %></a>
-        <p class="text-gray-500 text-sm mt-1"><%= topic.descripcion %></p>
-        <p class="text-gray-600 text-xs mt-2"><%= topic.enlaces.length %> enlaces</p>
-      </div>
-      <div class="flex flex-col items-center ml-4">
-        <button class="vote-btn text-green-400 hover:text-green-300 text-xl" data-id="<%= topic._id %>" data-type="topic">▲</button>
-        <span class="text-white font-bold vote-count"><%= topic.votos %></span>
-      </div>
-    </div>
-  </div>
+  <%- include('partials/topicCard', { topic: topic }) %>
 <% }) %>
 
 <%- include('partials/footer') %>
