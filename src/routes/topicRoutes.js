@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const topicController = require('../controllers/topicController')
 
+//nota, las rutas fijas siempre antes que las dinamicas, el orden importa
 router.get('/', topicController.getAllTopics)
 router.get('/topics/new', topicController.newTopicForm)
 router.post('/topics', topicController.createTopic)
