@@ -1,0 +1,11 @@
+<div class="topic-card">
+    <div>
+        <a href="/topics/<%= topic._id %>" class="topic-link"><%= topic.titulo %></a>
+        <p class="text-muted"><%= topic.descripcion %></p>
+        <p class="text-muted text-small"><%= topic.enlaces.length %> enlaces</p>
+    </div>
+    <div class="vote-container">
+        <button class="vote-btn" data-id="<%= topic._id %>" data-type="topic">▲</button>
+        <span class="vote-count"><%= topic.votos %></span>
+    </div>
+</div>

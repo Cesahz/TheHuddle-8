@@ -1,23 +1,21 @@
 <%- include('partials/header') %>
 
 <div class="mb-6">
-  <a href="/" class="text-gray-500 hover:text-green-400 text-sm">← Volver</a>
+  <a href="/" class="back-link">← Volver</a>
 </div>
 
-<h1 class="text-2xl text-green-400 mb-8">Editar tema</h1>
+<h1 class="title-primary" style="margin-bottom: 24px;">Editar tema</h1>
 
-<form action="/topics/<%= topic._id %>?_method=PUT" method="POST" class="space-y-4">
-  <div>
-    <label class="text-gray-400 text-sm">Título</label>
-    <input type="text" name="titulo" value="<%= topic.titulo %>" required
-      class="w-full bg-gray-900 border border-gray-700 rounded px-4 py-2 mt-1 text-white focus:outline-none focus:border-green-500"/>
+<form action="/topics/<%= topic._id %>?_method=PUT" method="POST">
+  <div class="form-group">
+    <label class="label-text">Título</label>
+    <input type="text" name="titulo" value="<%= topic.titulo %>" required class="input-field"/>
   </div>
-  <div>
-    <label class="text-gray-400 text-sm">Descripción</label>
-    <textarea name="descripcion" rows="3"
-      class="w-full bg-gray-900 border border-gray-700 rounded px-4 py-2 mt-1 text-white focus:outline-none focus:border-green-500"><%= topic.descripcion %></textarea>
+  <div class="form-group">
+    <label class="label-text">Descripción</label>
+    <textarea name="descripcion" rows="3" class="textarea-field"><%= topic.descripcion %></textarea>
   </div>
-  <button type="submit" class="bg-green-500 hover:bg-green-400 text-gray-950 px-6 py-2 rounded font-bold">Guardar cambios</button>
+  <button type="submit" class="btn-primary" style="margin-top: 16px;">Guardar cambios</button>
 </form>
 
 <%- include('partials/footer') %>

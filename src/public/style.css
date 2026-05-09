@@ -1,0 +1,180 @@
+/* Estilos base */
+body {
+    background-color: #030303; /* Aún más oscuro para mayor contraste */
+    color: #d1d5db;
+    font-family: monospace;
+    margin: 0;
+}
+
+.container {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+.nav-bar {
+    border-bottom: 2px solid #16a34a; /* Borde verde más marcado */
+    padding: 16px 24px;
+    background-color: #0a0a0a;
+}
+
+.brand-link {
+    color: #4ade80;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+/* Layout */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.title-primary {
+    color: #4ade80;
+    font-size: 1.5rem;
+}
+
+.back-link {
+    color: #9ca3af;
+    text-decoration: underline;
+    font-size: 0.875rem;
+}
+
+.back-link:hover {
+    color: #4ade80;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: #16a34a;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #22c55e;
+}
+
+.btn-text {
+    background: none;
+    border: none;
+    color: #6b7280;
+    cursor: pointer;
+    font-size: 0.875rem;
+    padding: 0;
+}
+
+.btn-text:hover {
+    color: #4ade80;
+}
+
+.btn-danger:hover {
+    color: #f87171;
+}
+
+/* Tarjetas */
+.card {
+    border: 1px solid #374151; /* Borde más claro */
+    background-color: #0a0a0a; /* Fondo sutilmente diferente al body */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.topic-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.topic-card:hover {
+    border-color: #166534;
+    background-color: #0f140f;
+}
+
+.topic-link {
+    color: #fff;
+    font-size: 1.1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.topic-link:hover {
+    color: #4ade80;
+}
+
+.text-muted {
+    color: #9ca3af;
+    font-size: 0.875rem;
+}
+
+.text-small {
+    font-size: 0.75rem;
+}
+
+/* Formularios */
+.form-group {
+    margin-bottom: 16px;
+}
+
+.input-field, .textarea-field {
+    width: 100%;
+    background-color: #050505;
+    border: 1px solid #4b5563;
+    border-radius: 4px;
+    padding: 10px;
+    color: white;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.input-field:focus, .textarea-field:focus {
+    outline: none;
+    border-color: #4ade80;
+}
+
+.label-text {
+    color: #e5e7eb;
+    font-size: 0.875rem;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Sistema de votos */
+.vote-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+    background: #111;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #2d3748;
+}
+
+.vote-btn {
+    background: none;
+    border: none;
+    color: #4ade80;
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+.vote-btn:hover {
+    color: #86efac;
+}
+
+.vote-count {
+    font-weight: bold;
+    font-size: 1rem;
+}
