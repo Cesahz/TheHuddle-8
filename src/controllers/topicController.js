@@ -43,6 +43,6 @@ exports.deleteTopic = async (req, res) => {
 
 //votar tema
 exports.voteTopic = async (req, res) => {
-  await Topic.findByIdAndUpdate(req.params.id, { $inc: { votos: 1 } })
+  await Topic.findByIdAndUpdate(req.params.id, { $inc: { votos: 1 } }) //$inc: operador mongoDB para incrementar
   res.json({ success: true })
 }

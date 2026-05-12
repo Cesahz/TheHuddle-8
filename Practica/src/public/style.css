@@ -1,6 +1,6 @@
 /* Estilos base */
 body {
-    background-color: #030303; 
+    background-color: #030303; /* Aún más oscuro para mayor contraste */
     color: #d1d5db;
     font-family: monospace;
     margin: 0;
@@ -13,7 +13,7 @@ body {
 }
 
 .nav-bar {
-    border-bottom: 2px solid #16a34a;
+    border-bottom: 2px solid #16a34a; /* Borde verde más marcado */
     padding: 16px 24px;
     background-color: #0a0a0a;
 }
@@ -83,8 +83,8 @@ body {
 
 /* Tarjetas */
 .card {
-    border: 1px solid #374151;
-    background-color: #110f0f; 
+    border: 1px solid #374151; /* Borde más claro */
+    background-color: #0a0a0a; /* Fondo sutilmente diferente al body */
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 8px;
@@ -95,7 +95,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    border-radius: 5px;
 }
 
 .topic-card:hover {

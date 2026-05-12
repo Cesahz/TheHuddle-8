@@ -1,16 +1,17 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const methodOverride = require('method-override')
-const path = require('path') //permite usar metodos put/delete en formularios html
+const methodOverride = require('method-override') //permite usar metodos put/delete en formularios html
+const path = require('path') 
 require('dotenv').config() //cargar variables de entorno
 
+//crear la app
 const app = express()
 
-//middlewares (interceptor entre cada request y response)
-app.use(express.urlencoded({ extended: true }))
-app.use(express.json())
-app.use(methodOverride('_method'))
-app.use(express.static(path.join(__dirname, 'public')))
+//middlewares 
+app.use(express.urlencoded({ extended: true })) //leer datos de formularios HTML
+app.use(express.json())                         //leer datos JSON
+app.use(methodOverride('_method'))              //convierte POST+?_method=PUT en PUT
+app.use(express.static(path.join(__dirname, 'public'))) //sirve main al navegador
 
 //capa de vistas, para respetar la arquitectura MVC
 app.set('view engine', 'ejs')   //define ejs como el motor de renderizado
@@ -30,6 +31,7 @@ const topicRoutes = require('./routes/topicRoutes')
 app.use('/', topicRoutes)
 
 //ruta de los links
+
 const linkRoutes = require('./routes/linkRoutes')
 app.use('/topics/:id/links', linkRoutes) //subrutas dinamicas dependiendo del id :3
 

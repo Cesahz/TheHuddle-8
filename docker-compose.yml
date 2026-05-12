@@ -1,8 +1,8 @@
 services:
   app:
-    build: .
+    build: .   #construye desde el dockerfile
     ports:
-      - "3000:3000"
+      - "3000:3000"  #host:contenedor
     volumes:
       - .:/app
       - /app/node_modules
@@ -10,14 +10,14 @@ services:
       - MONGO_URI=mongodb://mongo:27017/thehuddle
       - PORT=3000
     depends_on:
-      - mongo
+      - mongo #espera a que MongoDB arranque
 
   mongo:
-    image: mongo:7
+    image: mongo:7   #imagen oficial de MongoDB
     ports:
       - "27017:27017"
     volumes:
-      - mongo_data:/data/db
+      - mongo_data:/data/db #los datos se guardan igual si se destruye el contenedor
 
 volumes:
   mongo_data:
